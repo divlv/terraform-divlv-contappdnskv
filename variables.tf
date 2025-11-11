@@ -47,11 +47,6 @@ variable "domain_zone_resource_group_name" {
   description = "Specifies the resource group name where the domain zone resources are managed in the cloud infrastructure."
 }
 
-variable "environment_suffix" {
-  type        = string
-  description = "Suffix used to distinguish resources in different environments such as dev, test, or production for better organization."
-}
-
 variable "environment_tag" {
   type        = string
   description = "Tag to identify the deployment environment such as development, staging, or production for resource organization."
@@ -61,4 +56,3 @@ variable "warning_tag" {
   type        = string
   description = "Tag used to identify resources that require attention or caution within the infrastructure deployment."
 }
-

@@ -24,7 +24,7 @@ data "azurerm_container_app_environment" "container_app_environment" {
 }
 
 resource "azurerm_dns_a_record" "app_a_dns" {
-  name                = "${var.app_dns_name}${var.environment_suffix}"
+  name                = "${var.app_dns_name}"
   zone_name           = var.dns_zone_name
   resource_group_name = var.domain_zone_resource_group_name
   ttl                 = 300
@@ -32,7 +32,7 @@ resource "azurerm_dns_a_record" "app_a_dns" {
 }
 
 resource "azurerm_dns_txt_record" "app_domain_txt_dns" {
-  name                = "asuid.${var.app_dns_name}${var.environment_suffix}"
+  name                = "asuid.${var.app_dns_name}"
   zone_name           = var.dns_zone_name
   resource_group_name = var.domain_zone_resource_group_name
   ttl                 = 300
