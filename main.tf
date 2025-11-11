@@ -24,7 +24,7 @@ data "azurerm_container_app_environment" "container_app_environment" {
 }
 
 resource "azurerm_dns_a_record" "app_a_dns" {
-  name                = "${var.app_dns_name}"
+  name                = var.app_dns_name
   zone_name           = var.dns_zone_name
   resource_group_name = var.domain_zone_resource_group_name
   ttl                 = 300
